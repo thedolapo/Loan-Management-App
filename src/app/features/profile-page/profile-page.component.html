@@ -1,0 +1,341 @@
+<div class="container-fluid">
+    
+    <div class="col">
+
+        <!-- SECTION ONE  -->
+
+        <div class="c-row section-one ">
+            <div class="l-dashboard-title">
+                <h3>User Profiles</h3>
+                <input type="text" (click)="toggle()" class="dashboard-input" placeholder="Search User or ID" [(ngModel)]="searchValue" >
+            </div>
+
+        </div>
+        <div class="section-one " *ngIf="view">
+
+
+            <div class="profile-search-result">
+                <div class="profile-search-result-header">
+
+                    <!-- <div class="search-row ">Name</div>
+                                <div class="search-row ">Middle Name</div>
+                                <div class="search-row ">Surname</div>
+                                <div class="search-row ">User ID</div>
+                                <div class="search-row ">Phone Number</div>
+                                <div class="search-row ">Status</div>
+                                <div class="search-row ">Account Created</div> -->
+
+                </div>
+                <div class="">
+                    <a href="" class="search-bar d-flex justify-content-between">
+                        <div class="search-row ">David</div>
+                        <div class="search-row ">Middle Name</div>
+                        <div class="search-row ">Surname</div>
+                        <div class="search-row ">User ID</div>
+                        <div class="search-row ">Phone Numberckjwncjn wejncj</div>
+                        <div class="search-row ">Status</div>
+                        <div class="search-row ">Account Created</div>
+                    </a>
+                    <a href="" class="search-bar d-flex justify-content-between">
+                        <div class="search-row ">David</div>
+                        <div class="search-row ">Middle Name</div>
+                        <div class="search-row ">Surname</div>
+                        <div class="search-row ">User ID</div>
+                        <div class="search-row ">Phone Numberckjwncjn wejncj</div>
+                        <div class="search-row ">Status</div>
+                        <div class="search-row ">Account Created</div>
+                    </a>
+                    <a href="" class="search-bar d-flex justify-content-between">
+                        <div class="search-row ">David</div>
+                        <div class="search-row ">Middle Name</div>
+                        <div class="search-row ">Surname</div>
+                        <div class="search-row ">User ID</div>
+                        <div class="search-row ">Phone Numberckjwncjn wejncj</div>
+                        <div class="search-row ">Status</div>
+                        <div class="search-row ">Account Created</div>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col search-result ">
+            <h6 class="font-weight-bold "> Search User Results : <h6>{{searchValue}}</h6></h6>
+        </div>
+      
+        <div class="d-flex mt-2 search-result-container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 basic-details-card user-info-section">
+                    <div>
+                        <img src="../../../assets/img/profile-icon.svg" alt="profile-icon" class="profile-icon">
+                        <h4 class="font-weight-bold">
+                            Personal Details
+                        </h4>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-lg-6 col-md-12">
+                                <label for="searchId">Name
+                                </label>
+                               
+                                <input type="text" placeholder="Chumbudike"  class="form-control form-control-sm" readonly aria-readonly="true">
+                            </div>
+                            <div class="form-group col-lg-6 col-md-12">
+                                <label for="searchId">Surname
+                                </label>
+                                <input type="text" placeholder="Ahigobi"  class="form-control form-control-sm" readonly aria-readonly="true">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-lg-6 col-md-12">
+                                <label for="searchId">Gender
+                                </label>
+                                <input type="text" placeholder="Male"  class="form-control form-control-sm" readonly aria-readonly="true">
+                            </div>
+                            <div class="form-group col-lg-6 col-md-12">
+                                <label for="searchId">User ID
+                                </label>
+                                <input type="text" placeholder="123GH918"  class="form-control form-control-sm" readonly aria-readonly="true">
+                            </div>
+
+                        </div>
+                      
+
+
+                    </form>
+                    <div>
+                            <h4 class="font-weight-bold">
+                                Contact Details
+                            </h4>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-lg-6 col-md-12">
+                                    <label for="searchId">Name
+                                    </label>
+                                   
+                                    <input type="text" placeholder="Chumbudike"  class="form-control form-control-sm" readonly aria-readonly="true">
+                                </div>
+                                <div class="form-group col-lg-6 col-md-12">
+                                    <label for="searchId">Surname
+                                    </label>
+                                    <input type="text" placeholder="Ahigobi"  class="form-control form-control-sm" readonly aria-readonly="true">
+                                </div>
+    
+                            </div>
+    
+                            <div class="row">
+                                <div class="form-group col-lg-6 col-md-12">
+                                    <label for="searchId">Gender
+                                    </label>
+                                    <input type="text" placeholder="Male"  class="form-control form-control-sm" readonly aria-readonly="true">
+                                </div>
+                                <div class="form-group col-lg-6 col-md-12">
+                                    <label for="searchId">User ID
+                                    </label>
+                                    <input type="text" placeholder="123GH918"  class="form-control form-control-sm" readonly aria-readonly="true">
+                                </div>
+    
+                            </div>
+                          
+    
+    
+                        </form>
+                </div>
+                <div class="col-lg-7 col-md-12 offset-lg-5 transaction-info-section">
+                        <div class="basic-details-card mb-4">
+                                <h4 class="font-weight-bold">
+                                        Latest Transactions
+                                    </h4> 
+                                <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Transaction ID</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Type</th>
+                                                <th scope="col">Value(N)</th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                               
+                                                <td>James Frank</td>
+                                                <td>12486FA</td>
+                                                <td>25-05-2017</td>
+                                                <td>Repayment</td>
+                                                <td>200,000.00</td>
+                                                <td class="text-success">Active</td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>James Frank</td>
+                                                <td>12486FA</td>
+                                                <td>25-05-2017</td>
+                                                <td>Repayment</td>
+                                                <td>200,000.00</td>
+                                                <td class="text-danger">Inactive</td>
+                                            </tr>
+                                            <tr>
+                                               
+                                                <td>James Frank</td>
+                                                <td>12486FA</td>
+                                                <td>25-05-2017</td>
+                                                <td>Repayment</td>
+                                                <td>200,000.00</td>
+                                                <td class="text-success">Active</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                        </div>
+                        <div class="basic-details-card mb-4">
+                                <h4 class="font-weight-bold">
+                                        Transaction Type
+                                    </h4> 
+                              
+
+
+            <ngb-tabset>
+                    <ngb-tab title="Repayment">
+                      <ng-template ngbTabContent>
+                           
+                           <div class="transaction-history mt-4">
+                           <form >
+                               <div class="row">
+                                    <div class="form-group col">
+                                            <label for="searchId">Search Using Transaction ID
+                                                <input type="text" class="dashboard-input form-control" placeholder="Search Transaction ID" style="height: 50px;" >
+                                            </label>
+                                    </div>
+                               </div>
+                               <div class="row">
+                                    <div class="form-group col">
+                                            <label for="searchId">From :
+                                                <input type="date" class=" form-control" placeholder="Search Transaction ID" >
+                                            </label>
+                                    </div>
+                                    <div class="form-group col">
+                                            <label for="searchId">To :
+                                                    <input type="date" class="form-control" placeholder="Search Transaction ID" >
+                                                </label>
+                                         
+                                    </div>
+                               </div>
+                                      
+                          
+                           </form>
+                           </div>
+
+                           <div class="transaction-history mt-4">
+                                <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Transaction ID</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Type</th>
+                                                <th scope="col">Value(N)</th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                               
+                                                <td>James Frank</td>
+                                                <td>12486FA</td>
+                                                <td>25-05-2017</td>
+                                                <td>Repayment</td>
+                                                <td>200,000.00</td>
+                                                <td class="text-success">Active</td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>James Frank</td>
+                                                <td>12486FA</td>
+                                                <td>25-05-2017</td>
+                                                <td>Repayment</td>
+                                                <td>200,000.00</td>
+                                                <td class="text-danger">Inactive</td>
+                                            </tr>
+                                            <tr>
+                                               
+                                                <td>James Frank</td>
+                                                <td>12486FA</td>
+                                                <td>25-05-2017</td>
+                                                <td>Repayment</td>
+                                                <td>200,000.00</td>
+                                                <td class="text-success">Active</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                           </div>
+                      </ng-template>
+                    </ngb-tab>
+                   
+                    <ngb-tab title="Disbursement">
+                      <ng-template ngbTabContent>
+                            <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Transaction ID</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Value(N)</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                           
+                                            <td>James Frank</td>
+                                            <td>12486FA</td>
+                                            <td>25-05-2017</td>
+                                            <td>Repayment</td>
+                                            <td>200,000.00</td>
+                                            <td class="text-success">Active</td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td>James Frank</td>
+                                            <td>12486FA</td>
+                                            <td>25-05-2017</td>
+                                            <td>Repayment</td>
+                                            <td>200,000.00</td>
+                                            <td class="text-danger">Inactive</td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>James Frank</td>
+                                            <td>12486FA</td>
+                                            <td>25-05-2017</td>
+                                            <td>Repayment</td>
+                                            <td>200,000.00</td>
+                                            <td class="text-success">Active</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                    </ng-template>
+                    </ngb-tab>
+            </ngb-tabset>
+                        </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>

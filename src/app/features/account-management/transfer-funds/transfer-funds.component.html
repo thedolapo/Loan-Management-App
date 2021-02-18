@@ -1,0 +1,79 @@
+<div class="container-fluid">
+        <div class="col">
+    
+            <!-- SECTION ONE  -->
+    
+            <div class="c-row section-one">
+                <div class="l-dashboard-title">
+                    <h3>Account Management</h3>
+    
+                </div>
+            </div>
+            <div class="c-row width-control justify-content-between">
+                    <h5 >Transfer Funds</h5>
+                    <h6 routerLink="/account-management" class="text-danger"> BACK </h6>
+            </div>
+            <div class="l-layout-all-components">
+    
+    
+                    <mat-horizontal-stepper labelPosition="bottom" #stepper>
+                            <mat-step [stepControl]="firstFormGroup">
+                              <form [formGroup]="firstFormGroup">
+                                <ng-template matStepLabel>Transfer From</ng-template>
+                                <mat-form-field>
+                                  <mat-label>Account Number</mat-label>
+                                  <input matInput placeholder="Account Number" formControlName="firstCtrl" required>
+                                </mat-form-field>
+                                <div>
+                                  <button mat-button matStepperNext>Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step [stepControl]="secondFormGroup" optional>
+                              <form [formGroup]="secondFormGroup">
+                                <ng-template matStepLabel>Transfer To</ng-template>
+                                <mat-form-field>
+                                  <mat-label>Account Number</mat-label>
+                                  <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                         required>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <mat-label>Narration</mat-label>
+                                    <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                           required>
+                                  </mat-form-field>
+                                <div>
+                                  <button mat-button matStepperPrevious>Back</button>
+                                  <button mat-button matStepperNext>Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step>
+                              <ng-template matStepLabel>Done</ng-template>
+                              <div class="display-card">
+                                  <h3>Transfer Done</h3>
+                                  <label for="">Account Name - From</label>
+                                  <input type="text" placeholder="James Oluyemi" readonly class="matform-type">
+                                  <label for="">Account Name - To</label>
+                                  <input type="text" placeholder="Miles Major" readonly class="matform-type">
+                                  
+                                  <label for="">Amount Transferred</label>
+                                  <input type="text" placeholder="NGN 23,000.00" readonly class="matform-type">
+                                 
+                                  <button class="btn btn-info">View More Details</button>
+                                  
+                              </div>
+                              <div>
+                                <button mat-button matStepperPrevious>Back</button>
+                                <button mat-button (click)="stepper.reset()">Reset</button>
+                              </div>
+                            </mat-step>
+                          </mat-horizontal-stepper>
+                          
+               
+                       
+                   
+    
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,99 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <img width="20" alt="Angular Logo" src="/assets/img/Vector.svg" />
+    <span class="title-style">Fund Vault.</span>
+    <div class="spacer"></div>
+    <div class="mr-5">
+
+
+        <a aria-label="Profile-page" target="_blank" rel="noopener" routerLink="/profile-page" title="Profile-page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <g transform="translate(-1236.495 -10.495)">
+                    <g transform="translate(1242.304 15.664)">
+                        <path
+                            d="M14.608,25.728V24.652A2.152,2.152,0,0,0,12.456,22.5h-4.3A2.152,2.152,0,0,0,6,24.652v1.076"
+                            transform="translate(-6 -16.044)" fill="none" stroke="#fff" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" />
+                        <path d="M16.3,6.652A2.152,2.152,0,1,1,14.152,4.5,2.152,2.152,0,0,1,16.3,6.652Z"
+                            transform="translate(-9.848 -4.5)" fill="none" stroke="#fff" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" />
+                    </g>
+                    <g transform="translate(1236.495 10.495)" fill="none" stroke="#fff" stroke-width="2">
+                        <circle cx="10" cy="10" r="10" stroke="none" />
+                        <circle cx="10" cy="10" r="9" fill="none" />
+                    </g>
+                </g>
+            </svg>
+
+
+        </a>
+
+    </div>
+</div>
+
+<div class="l-main-body">
+
+    <!-- <div class="l-sidebar-content"> -->
+    <div class="l-sidebar-body">
+        <ul class="l-sidenav-list">
+            <li routerLink="/dashboard" routerLinkActive="active-link">
+                <a>
+                    <i class="material-icons mr-2 " style="vertical-align: middle">dashboard</i>
+                    <!-- <img src="../../../assets/img/dashboard-black.svg" alt=""> -->
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none" /><path class="dashboard" d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg> -->
+                    <span class="icon-text">Dashboard</span>
+                </a>
+            </li>
+
+            <li routerLink="/account-management" routerLinkActive="active-link">
+                <i class="material-icons mr-2" style="vertical-align: middle">account_balance</i><span
+                    class="icon-text">Account Management</span>
+            </li>
+
+            <li routerLink="/card-management" routerLinkActive="active-link">
+                <i class="material-icons mr-2" style="vertical-align: middle">credit_card</i><span
+                    class="icon-text">Card Management</span>
+            </li>
+
+            <li routerLink="/customer-management" routerLinkActive="active-link">
+                <i class="material-icons mr-2" style="vertical-align: middle">supervisor_account</i><span
+                    class="icon-text">Customer Management</span>
+            </li>
+
+            <li routerLink="/loan-application" routerLinkActive="active-link">
+                <i class="material-icons mr-2" style="vertical-align: middle">line_weight</i><span
+                    class="icon-text">Loan Management</span>
+            </li>
+            <!-- <li routerLink="/transaction-page" routerLinkActive="active-link">
+                <a>
+                    <i class="material-icons mr-2" style="vertical-align: middle">history</i>
+                    <span class="icon-text">Transaction History</span>
+                </a>
+            </li>
+            <li routerLink="/profile-page" routerLinkActive="active-link">
+                <i class="material-icons mr-2" style="vertical-align: middle">person_outline</i><span
+                    class="icon-text">User Profiles</span>
+            </li> -->
+
+        </ul>
+
+    </div>
+    <div class="l-main-view-body ">
+
+
+        <router-outlet></router-outlet>
+
+    </div>
+    <!-- </div> -->
+
+</div>

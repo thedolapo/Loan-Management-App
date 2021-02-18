@@ -1,0 +1,94 @@
+<div class="container-fluid">
+        <div class="col">
+    
+            <!-- SECTION ONE  -->
+    
+            <div class="c-row section-one">
+                <div class="l-dashboard-title">
+                    <h3>Card Management</h3>
+    
+                </div>
+            </div>
+            <div class="c-row width-control justify-content-between">
+                    <h5 >Freeze Card</h5>
+                    <h6 routerLink="/card-management" class="text-danger"> BACK </h6>
+            </div>
+            <div class="l-layout-all-components">
+    
+    
+                <mat-horizontal-stepper labelPosition="bottom" #stepper>
+                    <mat-step [stepControl]="firstFormGroup">
+                      <form [formGroup]="firstFormGroup">
+                        <ng-template matStepLabel>Input Account Details</ng-template>
+                       <div class="row">
+                          <mat-form-field class="mr-2">
+                              <mat-label>First Name</mat-label>
+                              <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Last Name</mat-label>
+                                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                              </mat-form-field>
+                       </div>
+
+                       <div class="row">
+                          <mat-form-field class="mr-2">
+                              <mat-label>User ID</mat-label>
+                              <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>BVN</mat-label>
+                                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                              </mat-form-field>
+                       </div>
+                        <div>
+                          <button mat-button matStepperNext>Retreive Details</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup" optional>
+                      <form [formGroup]="secondFormGroup">
+                        <ng-template matStepLabel>Account Details</ng-template>
+                        <div class="display-card">
+                            <h3>Account Details</h3>
+                            <label for="">Account Name</label>
+                            <input type="text" placeholder="James Oluyemi" readonly class="matform-type">
+                            
+                            <label for="">Account Number</label>
+                            <input type="text" placeholder="093935544" readonly class="matform-type">
+                           
+                            <!-- <button class="btn btn-info">View More Details</button> -->
+                            
+                        </div>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Freeze Account</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <div class="display-card">
+                          <h3 class="text-info">Account Frozen</h3>
+                          <label for="">Account Name</label>
+                          <input type="text" placeholder="James Oluyemi" readonly class="matform-type">
+                          
+                          <label for="">Account Number</label>
+                          <input type="text" placeholder="093935544" readonly class="matform-type">
+                         
+                          <!-- <button class="btn btn-info">View More Details</button> -->
+                          
+                      </div>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper.reset()">Freeze New Account</button>
+                      </div>
+                    </mat-step>
+                  </mat-horizontal-stepper>
+           
+                       
+                   
+    
+            </div>
+        </div>
+    </div>

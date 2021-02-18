@@ -1,0 +1,203 @@
+<div class="container-fluid">
+  <div class="col">
+
+    <!-- SECTION ONE  -->
+
+    <div class="c-row section-one">
+      <div class="l-dashboard-title">
+        <h3>Account Management</h3>
+
+      </div>
+    </div>
+    <div class="c-row width-control justify-content-between">
+      <h5>Create Account</h5>
+      <h6 routerLink="/account-management" class="text-danger"> BACK </h6>
+    </div>
+    <div class="l-layout-all-components">
+
+
+      <mat-horizontal-stepper labelPosition="bottom" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <!-- <form>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputAddress">Address</label>
+                                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputAddress2">Address 2</label>
+                                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                    </div>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <label for="inputCity">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                      </div>
+                                      <div class="form-group col-md-4">
+                                        <label for="inputState">State</label>
+                                        <select id="inputState" class="form-control">
+                                          <option selected>Choose...</option>
+                                          <option>...</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                          Check me out
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                  </form> -->
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Customer Details</ng-template>
+            <div class="row">
+
+              <mat-form-field class="mr-2">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+              </mat-form-field>
+
+            </div>
+            <div class="row">
+
+              <mat-form-field class="mr-2">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>BVN Number</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+              </mat-form-field>
+
+            </div>
+
+
+            <div class="row">
+
+              <mat-form-field class="mr-2">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+              </mat-form-field>
+
+            </div>
+            <div class="row">
+
+              <mat-form-field class="mr-2">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>BVN Number</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+              </mat-form-field>
+
+            </div>
+
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your address</ng-template>
+            <mat-form-field>
+              <mat-label>Address</mat-label>
+              <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Review</ng-template>
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Customer Details</ng-template>
+
+            <div class="row">
+
+              <mat-form-field class="mr-2">
+                <mat-label>James </mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" readonly>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Oluyemi</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" readonly>
+              </mat-form-field>
+
+            </div>
+            <div class="row">
+
+              <mat-form-field class="mr-2">
+                <mat-label>+234 832 232 3402</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" readonly>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>4824839028</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" readonly>
+              </mat-form-field>
+
+            </div>
+
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+          <div>
+
+
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+        <div class="display-card">
+            <h3>Account Created</h3>
+            <label for="">Account Name</label>
+            <input type="text" placeholder="James Oluyemi" readonly class="matform-type">
+            
+            <label for="">Created By</label>
+            <input type="text" placeholder="A235544" readonly class="matform-type">
+           
+            <button class="btn btn-info">View More Details</button>
+            
+        </div>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Create New Account</button>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+
+
+
+
+
+    </div>
+  </div>
+</div>

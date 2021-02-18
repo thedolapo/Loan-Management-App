@@ -1,0 +1,342 @@
+  <div class="container-fluid">
+    <div class="col">
+
+      <!-- SECTION ONE  -->
+
+      <div class="c-row section-one">
+        <div class="l-dashboard-title">
+          <h3>Customer Management</h3>
+
+        </div>
+      </div>
+      <div class="c-row width-control justify-content-between">
+        <h5>Customer Details</h5>
+        <h6 routerLink="/customer-management" class="text-danger"> BACK </h6>
+      </div>
+      <div class="l-layout-all-components">
+          <div class="column">
+              <input type="text" (click)="toggle()" class="dashboard-input" placeholder="Search User or ID" [(ngModel)]="searchValue" >
+
+              <div class="d-flex mt-2 search-result-container" *ngIf="view">
+                <div class="row">
+                  <div class="basic-details-card user-info-section">
+                    <div>
+                      <img src="../../../assets/img/profile-icon.svg" alt="profile-icon" class="profile-icon">
+                      <h4 class="font-weight-bold">
+                        Personal Details
+                      </h4>
+                    </div>
+                    <form>
+                      <div class="row">
+                        <div class="form-group col-lg-6 col-md-12">
+                          <label for="searchId">Name
+                          </label>
+      
+                          <input type="text" placeholder="Chumbudike" class="form-control form-control-sm" readonly
+                            aria-readonly="true">
+                        </div>
+                        <div class="form-group col-lg-6 col-md-12">
+                          <label for="searchId">Surname
+                          </label>
+                          <input type="text" placeholder="Ahigobi" class="form-control form-control-sm" readonly
+                            aria-readonly="true">
+                        </div>
+      
+                      </div>
+      
+                      <div class="row">
+                        <div class="form-group col-lg-6 col-md-12">
+                          <label for="searchId">Gender
+                          </label>
+                          <input type="text" placeholder="Male" class="form-control form-control-sm" readonly
+                            aria-readonly="true">
+                        </div>
+                        <div class="form-group col-lg-6 col-md-12">
+                          <label for="searchId">User ID
+                          </label>
+                          <input type="text" placeholder="123GH918" class="form-control form-control-sm" readonly
+                            aria-readonly="true">
+                        </div>
+      
+                      </div>
+      
+      
+      
+                    </form>
+                    <div>
+                      <h4 class="font-weight-bold">
+                        Contact Details
+                      </h4>
+                    </div>
+                    <form>
+                      <div class="row">
+                        <div class="form-group col-lg-6 col-md-12">
+                          <label for="searchId">Name
+                          </label>
+      
+                          <input type="text" placeholder="Chumbudike" class="form-control form-control-sm" readonly
+                            aria-readonly="true">
+                        </div>
+                        <div class="form-group col-lg-6 col-md-12">
+                          <label for="searchId">Surname
+                          </label>
+                          <input type="text" placeholder="Ahigobi" class="form-control form-control-sm" readonly
+                            aria-readonly="true">
+                        </div>
+      
+                      </div>
+      
+                      <div class="row">
+                        <div class="form-group col-lg-6 col-md-12">
+                          <label for="searchId">Gender
+                          </label>
+                          <input type="text" placeholder="Male" class="form-control form-control-sm" readonly
+                            aria-readonly="true">
+                        </div>
+                        <div class="form-group col-lg-6 col-md-12">
+                          <label for="searchId">User ID
+                          </label>
+                          <input type="text" placeholder="123GH918" class="form-control form-control-sm" readonly
+                            aria-readonly="true">
+                        </div>
+      
+                      </div>
+      
+      
+      
+                    </form>
+                  </div>
+      
+      
+                </div>
+                <div class=" transaction-info-section">
+                  <div class="basic-details-card mb-4">
+                    <h4 class="font-weight-bold">
+                      Latest Transactions
+                    </h4>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+      
+                          <th scope="col">Name</th>
+                          <th scope="col">Transaction ID</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Type</th>
+                          <th scope="col">Value(N)</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+      
+                          <td>James Frank</td>
+                          <td>12486FA</td>
+                          <td>25-05-2017</td>
+                          <td>Repayment</td>
+                          <td>200,000.00</td>
+                          <td class="text-success">Active</td>
+                        </tr>
+                        <tr>
+      
+                          <td>James Frank</td>
+                          <td>12486FA</td>
+                          <td>25-05-2017</td>
+                          <td>Repayment</td>
+                          <td>200,000.00</td>
+                          <td class="text-danger">Inactive</td>
+                        </tr>
+                        <tr>
+      
+                          <td>James Frank</td>
+                          <td>12486FA</td>
+                          <td>25-05-2017</td>
+                          <td>Repayment</td>
+                          <td>200,000.00</td>
+                          <td class="text-success">Active</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="basic-details-card mb-4">
+                    <h4 class="font-weight-bold">
+                      Transaction Type
+                    </h4>
+      
+      
+      
+                    <ngb-tabset>
+                      <ngb-tab title="Repayment">
+                        <ng-template ngbTabContent>
+      
+                          <div class="transaction-history mt-4">
+                            <form>
+                              <div class="row">
+                                <div class="form-group col">
+                                  <label for="searchId">Search Using Transaction ID
+                                    <input type="text" class="dashboard-input form-control" placeholder="Search Transaction ID"
+                                      style="height: 50px;">
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="form-group col">
+                                  <label for="searchId">From :
+                                    <input type="date" class=" form-control" placeholder="Search Transaction ID">
+                                  </label>
+                                </div>
+                                <div class="form-group col">
+                                  <label for="searchId">To :
+                                    <input type="date" class="form-control" placeholder="Search Transaction ID">
+                                  </label>
+      
+                                </div>
+                              </div>
+      
+      
+                            </form>
+                          </div>
+      
+                          <div class="transaction-history mt-4">
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+      
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Transaction ID</th>
+                                  <th scope="col">Date</th>
+                                  <th scope="col">Type</th>
+                                  <th scope="col">Value(N)</th>
+                                  <th scope="col">Status</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+      
+                                  <td>James Frank</td>
+                                  <td>12486FA</td>
+                                  <td>25-05-2017</td>
+                                  <td>Repayment</td>
+                                  <td>200,000.00</td>
+                                  <td class="text-success">Active</td>
+                                </tr>
+                                <tr>
+      
+                                  <td>James Frank</td>
+                                  <td>12486FA</td>
+                                  <td>25-05-2017</td>
+                                  <td>Repayment</td>
+                                  <td>200,000.00</td>
+                                  <td class="text-danger">Inactive</td>
+                                </tr>
+                                <tr>
+      
+                                  <td>James Frank</td>
+                                  <td>12486FA</td>
+                                  <td>25-05-2017</td>
+                                  <td>Repayment</td>
+                                  <td>200,000.00</td>
+                                  <td class="text-success">Active</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </ng-template>
+                      </ngb-tab>
+      
+                      <ngb-tab title="Disbursement">
+                        <ng-template ngbTabContent>
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+      
+                                <th scope="col">Name</th>
+                                <th scope="col">Transaction ID</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Value(N)</th>
+                                <th scope="col">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+      
+                                <td>James Frank</td>
+                                <td>12486FA</td>
+                                <td>25-05-2017</td>
+                                <td>Repayment</td>
+                                <td>200,000.00</td>
+                                <td class="text-success">Active</td>
+                              </tr>
+                              <tr>
+      
+                                <td>James Frank</td>
+                                <td>12486FA</td>
+                                <td>25-05-2017</td>
+                                <td>Repayment</td>
+                                <td>200,000.00</td>
+                                <td class="text-danger">Inactive</td>
+                              </tr>
+                              <tr>
+      
+                                <td>James Frank</td>
+                                <td>12486FA</td>
+                                <td>25-05-2017</td>
+                                <td>Repayment</td>
+                                <td>200,000.00</td>
+                                <td class="text-success">Active</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </ng-template>
+                      </ngb-tab>
+                    </ngb-tabset>
+                  </div>
+                </div>
+              
+                      </div>
+          </div>
+
+        <!-- <mat-horizontal-stepper labelPosition="bottom" #stepper>
+                              <mat-step [stepControl]="firstFormGroup">
+                                <form [formGroup]="firstFormGroup">
+                                  <ng-template matStepLabel>Fill out your name</ng-template>
+                                  <mat-form-field>
+                                    <mat-label>Name</mat-label>
+                                    <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                                  </mat-form-field>
+                                  <div>
+                                    <button mat-button matStepperNext>Next</button>
+                                  </div>
+                                </form>
+                              </mat-step>
+                              <mat-step [stepControl]="secondFormGroup" optional>
+                                <form [formGroup]="secondFormGroup">
+                                  <ng-template matStepLabel>Fill out your address</ng-template>
+                                  <mat-form-field>
+                                    <mat-label>Address</mat-label>
+                                    <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                          required>
+                                  </mat-form-field>
+                                  <div>
+                                    <button mat-button matStepperPrevious>Back</button>
+                                    <button mat-button matStepperNext>Next</button>
+                                  </div>
+                                </form>
+                              </mat-step>
+                              <mat-step>
+                                <ng-template matStepLabel>Done</ng-template>
+                                <p>You are now done.</p>
+                                <div>
+                                  <button mat-button matStepperPrevious>Back</button>
+                                  <button mat-button (click)="stepper.reset()">Reset</button>
+                                </div>
+                              </mat-step>
+                            </mat-horizontal-stepper> -->
+
+
+
+
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,561 @@
+<div class="container-fluid">
+    <div class="col">
+
+        <!-- SECTION ONE  -->
+
+        <div class="c-row section-one">
+            <div class="l-dashboard-title">
+                <h3>Welcome to Fund Vault</h3>
+                <input type="text" (click)="toggle()" class="dashboard-input" placeholder="Search User or ID">
+            </div>
+            
+
+        </div>
+        <div class="c-row section-one" *ngIf="view">
+               
+
+                <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                
+                                <th scope="col">Name</th>
+                                <th scope="col">Transaction ID</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Value(N)</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                               
+                                <td>James Frank</td>
+                                <td>12486FA</td>
+                                <td>25-05-2017</td>
+                                <td>Repayment</td>
+                                <td>200,000.00</td>
+                                <td class="text-success">Active</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>James Frank</td>
+                                <td>12486FA</td>
+                                <td>25-05-2017</td>
+                                <td>Repayment</td>
+                                <td>200,000.00</td>
+                                <td class="text-danger">Inactive</td>
+                            </tr>
+                            <tr>
+                               
+                                <td>James Frank</td>
+                                <td>12486FA</td>
+                                <td>25-05-2017</td>
+                                <td>Repayment</td>
+                                <td>200,000.00</td>
+                                <td class="text-success">Active</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+    
+            </div>
+
+
+
+          
+
+             <!-- SECTION THREE -->
+
+        <div class=" section-three">
+                <div class="l-dashboard-card-title">
+                    <h5 class="font-weight-bold">Fund Vault Summary</h5>
+
+                            <!-- ng date -->
+                    <!-- <div>
+                       
+                            <form class="form-inline">
+                                    <h6 class="mr-2">From : </h6>
+                                    <div class="form-group hidden">
+                                      <div class="input-group">
+                                        <input name="datepicker"
+                                               class="form-control"
+                                               ngbDatepicker
+                                               #datepicker="ngbDatepicker"
+                                               [autoClose]="'outside'"
+                                               (dateSelect)="onDateSelection($event)"
+                                               [displayMonths]="2"
+                                               [dayTemplate]="t"
+                                               outsideDays="hidden"
+                                               [startDate]="fromDate">
+                                        <ng-template #t let-date let-focused="focused">
+                                          <span class="custom-day"
+                                                [class.focused]="focused"
+                                                [class.range]="isRange(date)"
+                                                [class.faded]="isHovered(date) || isInside(date)"
+                                                (mouseenter)="hoveredDate = date"
+                                                (mouseleave)="hoveredDate = null">
+                                            {{ date.day }}
+                                          </span>
+                                        </ng-template>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                           
+                                      <div class="input-group">
+                                        <input #dpFromDate
+                                               class="form-control" placeholder="yyyy-mm-dd"
+                                               name="dpFromDate"
+                                               [value]="formatter.format(fromDate)"
+                                               (input)="fromDate = validateInput(fromDate, dpFromDate.value)">
+                                        <div class="input-group-append">
+                                          <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <h6 class="ml-2">To :</h6>
+                                    <div class="form-group ml-2">
+                                      <div class="input-group">
+                                        <input #dpToDate
+                                               class="form-control" placeholder="yyyy-mm-dd"
+                                               name="dpToDate"
+                                               [value]="formatter.format(toDate)"
+                                               (input)="toDate = validateInput(toDate, dpToDate.value)">
+                                        <div class="input-group-append">
+                                          <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  
+                                 
+                        </div> -->
+                         <!-- ng date end -->
+                </div>
+
+                <div class="l-dashboard-update-card">
+
+                    
+                    
+                    <div class="row l-dashboard-card ">
+                        <div class="c-disbursement-card disbursed">
+                            <div class="row justify-content-between">
+    
+    
+                                <div class="card-disbursement-col">
+                                    <div class="card-disbursement-title">
+    
+                                        Total Accounts
+    
+                                    </div>
+                                    <div class="card-disbursement-text font-weight-bold">
+                                       23,192
+                                      
+                                    </div>
+                                    <div class="text-light">
+                                            +298 Today  <img src="../../../assets/img/arrow-add.svg" alt="increase">
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-disbursement-card repayment">
+                            <div class="row justify-content-between">
+                                <div class="card-disbursement-col">
+                                    <div class="card-disbursement-title">
+    
+                                       Total Cards Issued
+    
+                                    </div>
+                                    <div class="card-disbursement-text font-weight-bold">
+                                        120
+                                    </div>
+                                    <div class="text-light">
+                                            +32 Today  <img src="../../../assets/img/arrow-add.svg" alt="increase">
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-disbursement-card active-loans">
+                            <div class="row justify-content-between">
+                                <div class="card-disbursement-col ">
+                                    <div class="card-disbursement-title">
+    
+                                        Total Value of Loans Disbursed
+    
+                                    </div>
+                                    <div class="card-disbursement-text font-weight-bold">
+                                        NGN 332,984,984.00
+                                    </div>
+
+                                    <div class="text-light">
+                                            0 Today  <img src="../../../assets/img/arrow-sub.svg" alt="increase">
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+
+
+
+
+
+
+  <!-- SECTION FOUR -->
+  <div class="c-row section-four">
+        <div class="l-dashboard-card-layout">
+           
+
+
+                <div class="l-dashboard-card-title">
+                        <h5 class="font-weight-bold">Quick Links</h5>
+    
+                               
+                    </div>
+
+
+            <div class="l-quicklink-layout">
+             <div class="h5 " style="color: rgb(126, 84, 6);"> 
+                <p class="d-inline"> ⚡</p> Access most used features quickly
+             </div>       
+            <div class="row l-dashboard-card ">
+                <div routerLink="/account-management/transfer-funds" class="c-dashboard-card applications_other">
+                    <div class="row justify-content-between">
+                        <div>
+                            <img src="../../../assets/img/bankicons/032-transfer.svg" class="image-30" alt="">
+                        </div>
+                        <!-- <div class="c-background-icon">
+                                    <img src="../../../assets/img/application_bg.svg" alt="">
+                                </div> -->
+                        <div class="card-col">
+                            <div class="card-text-other">
+                                <h2 class="v-hidden">
+                                    12
+                                </h2>
+                            </div>
+                            <div class="card-text-other">
+                                Transfer Funds
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div routerLink="/account-management/create-account" class="c-dashboard-card success_other">
+                    <div class="row justify-content-between">
+                        <div>
+                            <img src="../../../assets/img/bankicons/011-bank-1.svg" alt="" class="image-30">
+                        </div>
+                        <!-- <div class="c-background-icon">
+                                    <img src="../../../assets/img/succes_bg.svg" alt="">
+                                </div> -->
+                        <div class="card-col">
+                            <div class="card-text-other">
+                                    <h2 class="v-hidden">
+                                    12
+                                </h2>
+                            </div>
+                            <div class="card-text-other">
+                                Create Accounts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div routerLink="/customer-management/transaction-history" class="c-dashboard-card pending_other">
+                    <div class="row justify-content-between">
+                        <div>
+                            <img src="../../../assets/img/bankicons/031-money-box-1.svg" alt="" class="image-30">
+                        </div>
+                        <!-- <div class="c-background-icon">
+                                    <img src="../../../assets/img/pending_bg.svg" alt="">
+                                </div> -->
+                        <div class="card-col">
+                            <div class="card-text-other">
+                                    <h2 class="v-hidden">
+                                    12
+                                </h2>
+                            </div>
+                            <div class="card-text-other">
+                                Transaction History
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div routerLink="/card-management/create-card" class="c-dashboard-card failed_other">
+                        <div class="row justify-content-between">
+                            <div>
+                                <img src="../../../assets/img/bankicons/018-credit-card-1.svg" alt="" class="image-30">
+                            </div>
+                            <!-- <div class="c-background-icon">
+                                        <img src="../../../assets/img/pending_bg.svg" alt="">
+                                    </div> -->
+                            <div class="card-col">
+                                <div class="card-text-other">
+                                        <h2 class="v-hidden">
+                                        12
+                                    </h2>
+                                </div>
+                                <div class="card-text-other">
+                                    Create Cards
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div routerLink="/customer-management/customer-details" class="c-dashboard-card applications_other">
+                            <div class="row justify-content-between">
+                                <div>
+                                    <img src="../../../assets/img/bankicons/015-cheque.svg" alt="" class="image-30">
+                                </div>
+                                <!-- <div class="c-background-icon">
+                                            <img src="../../../assets/img/application_bg.svg" alt="">
+                                        </div> -->
+                                <div class="card-col">
+                                    <div class="card-text-other">
+                                            <h2 class="v-hidden">
+                                            12
+                                        </h2>
+                                    </div>
+                                    <div class="card-text-other">
+                                       Customer Details
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div routerLink="/account-management/freeze-account" class="c-dashboard-card success_other">
+                            <div class="row justify-content-between">
+                                <div>
+                                    <img src="../../../assets/img/bankicons//022-cash.svg" alt="" class="image-30">
+                                </div>
+                                <!-- <div class="c-background-icon">
+                                            <img src="../../../assets/img/succes_bg.svg" alt="">
+                                        </div> -->
+                                <div class="card-col">
+                                    <div class="card-text-other">
+                                            <h2 class="v-hidden">
+                                            12
+                                        </h2>
+                                    </div>
+                                    <div class="card-text-other">
+                                        Freeze Account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div routerLink="/loan-application/loan-disbursement-reports" class="c-dashboard-card pending_other">
+                            <div class="row justify-content-between">
+                                <div>
+                                    <img src="../../../assets/img/bankicons/005-research.svg" alt="" class="image-30">
+                                </div>
+                                <!-- <div class="c-background-icon">
+                                            <img src="../../../assets/img/pending_bg.svg" alt="">
+                                        </div> -->
+                                <div class="card-col">
+                                    <div class="card-text-other">
+                                            <h2 class="v-hidden">
+                                            12
+                                        </h2>
+                                    </div>
+                                    <div class="card-text-other">
+                                       Generate Reports
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div routerLink="/loan-application/loan-transaction-history" class="c-dashboard-card failed_other">
+                                <div class="row justify-content-between">
+                                    <div>
+                                        <img src="../../../assets/img/bankicons/033-transfer-1.svg" alt="" class="image-30">
+                                    </div>
+                                    <!-- <div class="c-background-icon">
+                                                <img src="../../../assets/img/pending_bg.svg" alt="">
+                                            </div> -->
+                                    <div class="card-col">
+                                        <div class="card-text-other">
+                                                <h2 class="v-hidden">
+                                                12
+                                            </h2>
+                                        </div>
+                                        <div class="card-text-other">
+                                      Loan Management
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            
+
+            </div>
+
+
+            <!-- <div class="row l-dashboard-card justify-content-between">
+                    <div class="c-dashboard-card applications_other">
+                        <div class="row justify-content-between">
+                            <div>
+                                <img src="../../../assets/img/application_other.svg" alt="">
+                            </div>
+                           
+                            <div class="card-col">
+                                <div class="card-text-other">
+                                    <h2>
+                                        12
+                                    </h2>
+                                </div>
+                                <div class="card-text-other">
+                                    Applications
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-dashboard-card success_other">
+                        <div class="row justify-content-between">
+                            <div>
+                                <img src="../../../assets/img/success_other.svg" alt="">
+                            </div>
+                           
+                            <div class="card-col">
+                                <div class="card-text-other">
+                                    <h2>
+                                        12
+                                    </h2>
+                                </div>
+                                <div class="card-text-other">
+                                    Success
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-dashboard-card pending_other">
+                        <div class="row justify-content-between">
+                            <div>
+                                <img src="../../../assets/img/pending_other.svg" alt="">
+                            </div>
+                           
+                            <div class="card-col">
+                                <div class="card-text-other">
+                                    <h2>
+                                        12
+                                    </h2>
+                                </div>
+                                <div class="card-text-other">
+                                    Pending
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-dashboard-card failed_other">
+                            <div class="row justify-content-between">
+                                <div>
+                                    <img src="../../../assets/img/failed_other.svg" alt="">
+                                </div>
+                             
+                                <div class="card-col">
+                                    <div class="card-text-other">
+                                        <h2>
+                                            12
+                                        </h2>
+                                    </div>
+                                    <div class="card-text-other">
+                                        Pending
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        
+                    
+                </div> -->
+
+
+            </div>
+            
+        </div>
+    </div>
+
+       
+
+
+
+      
+        <!-- SECTION SIX -->
+
+        <div class="section-six">
+            <div class="six-layout">
+                 
+<!--                         
+                    <div class="smaller-six-card mr-3">
+                            <div class="mb-4 font-weight-bold h5">
+                                    Summary
+                                </div>
+                            <div >
+                                    <div>Interest Rate : 3%</div>
+                                    <div>Loan Performance : 40%</div>
+                                    <div>Default Rate : 7%</div>
+                                </div>
+                    </div> -->
+                
+                
+                <!-- <div class="bigger-six-card ">
+                        <div class="mb-4 font-weight-bold h5">
+                                Transaction List
+                            </div>
+                        <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Transaction ID</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Value(N)</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>James Frank</td>
+                                        <td>12486FA</td>
+                                        <td>25-05-2017</td>
+                                        <td>Repayment</td>
+                                        <td>200,000.00</td>
+                                        <td>Success</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>James Frank</td>
+                                        <td>12486FA</td>
+                                        <td>25-05-2017</td>
+                                        <td>Repayment</td>
+                                        <td>200,000.00</td>
+                                        <td>Success</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>James Frank</td>
+                                        <td>12486FA</td>
+                                        <td>25-05-2017</td>
+                                        <td>Repayment</td>
+                                        <td>200,000.00</td>
+                                        <td>Success</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                </div> -->
+            </div>
+        </div>
+        
+
+
+
+    </div>
+</div>

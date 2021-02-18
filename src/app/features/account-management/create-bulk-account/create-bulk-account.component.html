@@ -1,0 +1,83 @@
+<div class="container-fluid">
+        <div class="col">
+    
+            <!-- SECTION ONE  -->
+    
+            <div class="c-row section-one">
+                <div class="l-dashboard-title">
+                    <h3>Account Management</h3>
+    
+                </div>
+            </div>
+            <div class="c-row width-control justify-content-between">
+                    <h5 >Create Bulk Account</h5>
+                    <h6 routerLink="/account-management" class="text-danger"> BACK </h6>
+            </div>
+            <div class="l-layout-all-components">
+    
+    
+                    <mat-horizontal-stepper labelPosition="bottom" #stepper>
+                            <mat-step [stepControl]="firstFormGroup">
+                              <form [formGroup]="firstFormGroup">
+                                <ng-template matStepLabel>Upload CSV FIle</ng-template>
+                                
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                  </div>
+
+                                <!-- <mat-form-field appearance="outline">
+                                  <mat-label>Name</mat-label>
+                                  <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                                </mat-form-field> -->
+                                <div>
+                                  <button mat-button matStepperNext>Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step [stepControl]="secondFormGroup" optional>
+                              <form [formGroup]="secondFormGroup">
+                                <ng-template matStepLabel>Fill out extra details</ng-template>
+                                <mat-form-field  appearance="outline">
+                                  <mat-label>Organisation Name</mat-label>
+                                  <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                         required>
+                                </mat-form-field>
+                                <div>
+                                  <button mat-button matStepperPrevious>Back</button>
+                                  <button mat-button matStepperNext>Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step>
+                              <ng-template matStepLabel>Done</ng-template>
+                              <div class="display-card  mb-5">
+                                  <h3>Account Created</h3>
+                                  <label for="">Accounts Created</label>
+                                  <input type="text" placeholder="274" readonly class="matform-type">
+                                  
+                                  <label for="">Failed to create</label>
+                                  <input type="text" placeholder="56" readonly class="matform-type">
+                                 
+                                  <button class="btn btn-info">Review Account Creation</button>
+                                  
+                              </div>
+                              <div>
+                                <button mat-button matStepperPrevious>Back</button>
+                                <button mat-button (click)="stepper.reset()">Create Bulk Account</button>
+                              </div>
+                            </mat-step>
+                          </mat-horizontal-stepper>
+                          
+               
+                       
+                   
+    
+            </div>
+        </div>
+    </div>
